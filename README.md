@@ -7,3 +7,7 @@
   
   🚧  Em construção...  🚧
 </h4>
+
+
+## 📁 Acesso ao projeto
+Você pode acessar os arquivos do MySQL Workbench 8.0 CE [aqui](https://github.com/Dayanaferrer/Questoes_Av2/tree/main/Avaliacao%20II%20-%20SQL)
