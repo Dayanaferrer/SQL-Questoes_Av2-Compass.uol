@@ -8,12 +8,12 @@ import java.sql.SQLException;
 
 public class ConnectorFactory {
 	
-	private final String DRIVER = "com.mysql.jdbc.Driver";
-	private final String URL = "jdbc:mysql://localhost:3306/dbsentimentos_funcionarios"; //sentimentos_funcionarios BANCO, tbl_armazenasentimento TABELA
-	private final String USER ="root";
-	private final String PASS = "root123!";
+	private static final String DRIVER = "com.mysql.jdbc.Driver";
+	private static final String URL = "jdbc:mysql://localhost/funcionario?useTimezone=true&serverTimezone=UTC"; 
+	private static final String USER ="root";
+	private static final String PASS = "root123!";
 	
-	public Connection getConnection () {		
+	public static Connection getConnection () {		
 		try {
 			Class.forName(DRIVER);
 				return DriverManager.getConnection(URL, USER, PASS);						
@@ -28,7 +28,7 @@ public class ConnectorFactory {
 					con.close();
 				}
 			} catch (SQLException ex) {
-				System.out.println("Mensagem do erro: ");				
+				System.out.println("Mensagem do erro: " + ex);				
 			}			
 		}
 	
@@ -41,7 +41,7 @@ public class ConnectorFactory {
 			}
 			
 		} catch (SQLException ex) {
-			System.out.println("Mensagem do erro: ");
+			System.out.println("Mensagem do erro Prepared Statement: " + ex);
 			
 		}
 		
@@ -55,18 +55,13 @@ public class ConnectorFactory {
 			}
 			
 		} catch (SQLException ex) {
-			System.out.println("Mensagem do erro: ");
+			System.out.println("Mensagem do erro ResultSet: " + ex);
 			
 		}
 		
 	}
 	
-	
-	
-	
-	
-	
-	
+
 	
 	}
 	
