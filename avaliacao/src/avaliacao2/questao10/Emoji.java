@@ -11,6 +11,12 @@ public class Emoji {
 	private String chateado = " :-( ";
 	private String divertido = " :-) ";
 	
+
+	public Emoji(String emj) {
+		this.sentimento=emj;
+	}
+	
+	
 	
 	public Integer getIdTbl() {
 		return idTbl;
