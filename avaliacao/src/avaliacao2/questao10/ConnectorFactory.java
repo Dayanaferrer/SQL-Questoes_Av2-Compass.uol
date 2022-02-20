@@ -6,6 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.sql.DataSource;
+import javax.xml.crypto.Data;
+
 
 public class ConnectorFactory  {
 	
@@ -24,7 +27,20 @@ public class ConnectorFactory  {
 
 	}	
 	
+public DataSource dataSource;	
+public Connection createConnector () {
+	try {
+		return this.dataSource.getConnection();
+	}catch (SQLException ex) {
+		System.out.println("Mensagem de erro:" + ex)
+		finally {ConnectorFactory.closeConnection();
+	}
+} 
 	
+}
+	  
+	 
+
 	public static void closeConnection(Connection con) {		//Fechar conexão(SEMPRE).		 
 			try {
 				if(con != null) {
