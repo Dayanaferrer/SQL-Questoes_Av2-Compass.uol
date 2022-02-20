@@ -1,0 +1,4 @@
+user=root
+password=root123!
+dburl=jdbc:mysql://localhost/produto?useTimezone=true&serverTimezone=UTC
+useSSL=false
