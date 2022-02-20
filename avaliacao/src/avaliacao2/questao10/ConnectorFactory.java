@@ -6,7 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ConnectorFactory {
+
+public class ConnectorFactory  {
 	
 	private static final String DRIVER = "com.mysql.jdbc.Driver";
 	private static final String URL = "jdbc:mysql://localhost/funcionario?useTimezone=true&serverTimezone=UTC"; 
@@ -20,8 +21,10 @@ public class ConnectorFactory {
 		} catch (ClassNotFoundException  | SQLException ex) {
 			throw new RuntimeException("Erro na conexão:  ", ex);					
 		}
+
+	}	
 	
-	}		
+	
 	public static void closeConnection(Connection con) {		//Fechar conexão(SEMPRE).		 
 			try {
 				if(con != null) {

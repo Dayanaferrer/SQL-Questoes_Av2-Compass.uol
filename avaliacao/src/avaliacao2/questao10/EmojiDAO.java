@@ -9,17 +9,19 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import com.mysql.cj.x.protobuf.MysqlxPrepare.Prepare;
+import com.mysql.cj.xdevapi.Statement;
 
 
 public class EmojiDAO {
 	
-	public void create (Emoji emj ) {											//Método para salvar  C (CRUD)
+	public static void create (Emoji emj ) {											//Método para salvar  C (CRUD)
 		
 		Connection con = ConnectorFactory.getConnection();						 //Abrir conexão
 		PreparedStatement stmt = null;
 		
 		try {
-			stmt = con.prepareStatement("INSERT INTO tblemoji (emoji, dia) VALUES (  ) ");
+			stmt = con.prepareStatement("INSERT INTO tblemoji (emoji, dia) VALUES (? , ?) ");
 			stmt.setString(1,emj.getSentimento());
 			stmt.setString(2,emj.getDia());
 			
@@ -35,6 +37,7 @@ public class EmojiDAO {
 			ConnectorFactory.closeConnection(con, stmt);
 			}
 		}
+
 		public List<Emoji> listar(){			//Read R (CRUD)
 			
 			Connection con = ConnectorFactory.getConnection();	 
@@ -50,7 +53,7 @@ public class EmojiDAO {
 				while(rs.next()) {
 				
 				
-				Emoji emj = new Emoji ();
+				Emoji emj = new Emoji();
 				
 				emj.setIdTbl(rs.getInt("id"));
 				emj.setSentimento(rs.getString("emoji"));

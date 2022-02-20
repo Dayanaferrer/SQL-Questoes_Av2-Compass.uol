@@ -11,11 +11,37 @@ public class Emoji {
 	private String chateado = " :-( ";
 	private String divertido = " :-) ";
 	
-
 	public Emoji(String emj) {
 		this.sentimento=emj;
 	}
-	
+
+	public Emoji() {
+		
+	}
+
+	public void selectEmoji (String selectEmj) {
+		this.emojiChateado = selectEmj.split(this.chateado, -1).length -1;
+		this.emojiDivertido = selectEmj.split(this.divertido, -1).length -1;
+		resultEmoji();		
+	}
+	public void resultEmoji () {
+		if(getEmojiDivertido() > getEmojiChateado()) {
+			String sentimentoFuncionario = "Divertido :-) ";
+			System.out.println(sentimentoFuncionario);
+			setSentimento(sentimentoFuncionario);
+			
+		}else if (getEmojiDivertido() < getEmojiChateado()) {
+			String sentimentoFuncionario = "Chateado :-( ";
+			System.out.println(sentimentoFuncionario);
+			setSentimento(sentimentoFuncionario);
+			
+		}else { 
+			String sentimentoFuncionario = "Neutro!";
+			System.out.println(sentimentoFuncionario);
+			setSentimento(sentimentoFuncionario);
+						
+		}
+	}
 	
 	
 	public Integer getIdTbl() {
@@ -59,8 +85,6 @@ public class Emoji {
 	}
 	public void setDivertido(String divertido) {
 		this.divertido = divertido;
-	}
-	
-	
+	}		
 
 }
