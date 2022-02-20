@@ -24,9 +24,9 @@ public class TiTech {
 									+ "VALUES"
 									+"(?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 			
-			stmt.setString(1, "Iten de conectividade");
-			stmt.setString(2, "Switch Cisco 220");
-			stmt.setDouble(3, 0.14);
+			stmt.setString(1, "Periférico");
+			stmt.setString(2, "Mesa digitalizadora");
+			stmt.setDouble(3, 0.75);
 //			stmt.setDate(4, new java.sql.Date(data.parse("20222-02-20").getTime()));
 			
 			int rowsAffected = stmt.executeUpdate ();
@@ -35,7 +35,7 @@ public class TiTech {
 				
 				ResultSet r = stmt.getGeneratedKeys();
 				while(r.next()) {
-					int id = rs.getInt (1);
+					int id = r.getInt (1);
 					System.out.println("Id= " +id);
 				}
 			}
