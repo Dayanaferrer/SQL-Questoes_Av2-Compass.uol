@@ -14,7 +14,6 @@ public class Emoji {
 	public Emoji(String emj) {
 		this.sentimento=emj;
 	}
-
 	public Emoji() {
 		
 	}

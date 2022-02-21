@@ -20,8 +20,7 @@ public class ScannerTest {
 			System.out.println("Responda com um dos seguintes emoticons :-) ou :-( ");
 			
 			String resposta = sn.nextLine();
-			humor.selectEmoji(resposta);
-			
+			humor.selectEmoji(resposta);		
 		
 
 	}

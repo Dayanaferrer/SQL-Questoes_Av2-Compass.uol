@@ -22,7 +22,6 @@ public class EmojiDAO {
 			pstm.setString(1, emoji.getSentimento());
 			pstm.setDate(2, Date.valueOf(java.time.LocalDate.now()), null);
 			
-
 			pstm.execute();
 
 			try (ResultSet resultado = pstm.getGeneratedKeys()) {

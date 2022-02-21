@@ -24,7 +24,6 @@ public class ConnectorFactory  {
 		} catch (ClassNotFoundException  | SQLException ex) {
 			throw new RuntimeException("Erro na conexão:  ", ex);					
 		}
-
 	}	
 	
 public DataSource dataSource;	
@@ -38,8 +37,7 @@ public Connection createConnector () {
 } 
 	
 }
-	  
-	 
+	  	 
 
 	public static void closeConnection(Connection con) {		//Fechar conexão(SEMPRE).		 
 			try {
