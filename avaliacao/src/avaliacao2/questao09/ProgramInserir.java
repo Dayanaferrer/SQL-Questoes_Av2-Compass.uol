@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.text.ParseException;
 //import java.text.SimpleDateFormat;
 
-public class TiTech {
+public class ProgramInserir {
 
 	public static void main(String[] args) {
 		
