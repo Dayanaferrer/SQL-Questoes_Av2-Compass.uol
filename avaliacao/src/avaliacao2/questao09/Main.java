@@ -12,12 +12,11 @@ public class Main {
 	
 	public static void menu() {
 		System.out.println("\t===========TiTech SYSTEM==========");
-		System.out.println();
 		System.out.println("\t Digite a opçăo desejada");
 		System.out.println("1. Inserir uma oferta");
 		System.out.println("2. Atualizar uma oferta");
 		System.out.println("3. Deletar uma oferta");
-		System.out.println("4. Listar nome que contem?");
+		System.out.println("4. Listar nomes existentes");
 		System.out.println("5. Listar todos produtos");
 		System.out.println("0. Sair");
 		System.out.println("Opcao:");
@@ -27,8 +26,8 @@ public class Main {
 
 	public static ProdutosDAO createProductDaoConn() {
 		Connection connection = new ConnectionFactory().createConnection();
-		ProdutosDAO produtoDAO = new ProdutosDAO(connection);
-		return produtoDAO;
+		ProdutosDAO produtosDAO = new ProdutosDAO(connection);
+		return produtosDAO;
 	}
 
 	public static void inclui() throws SQLException {
