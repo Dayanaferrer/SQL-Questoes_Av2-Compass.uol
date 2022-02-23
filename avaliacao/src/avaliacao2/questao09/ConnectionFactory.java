@@ -2,11 +2,7 @@ package avaliacao2.questao09;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
+
 
 import javax.sql.DataSource;
 
