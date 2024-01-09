@@ -2,10 +2,6 @@
 
 <p align="center"> Questões da 2º Avaliação da Sprint 2 do Programa de Bolsas da Compass.uol. </p>
 
-<h4 align="center"> 
-	 Java Select 🚀 
-  
-</h4>
 
 
 ## 📁 Acesso ao projeto
